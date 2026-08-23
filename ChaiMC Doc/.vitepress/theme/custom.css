@@ -1,0 +1,134 @@
+/* ===========================================================
+   Obsidian 兼容样式：脚注、高亮标注等
+   =========================================================== */
+
+/* ---- 脚注 (markdown-it-footnote) ---- */
+
+/* 正文中的脚注引用：上标样式，贴近 Obsidian 观感 */
+.footnote-ref {
+  font-size: 0.85em;
+  vertical-align: super;
+  line-height: 0;
+  padding: 0 2px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+.footnote-ref::before { content: '['; opacity: 0.5; }
+.footnote-ref::after  { content: ']'; opacity: 0.5; }
+.footnote-ref:hover {
+  background-color: var(--vp-c-brand-soft);
+  text-decoration: none;
+}
+
+/* 页面底部的脚注区 */
+.footnotes {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--vp-c-divider);
+  font-size: 0.92em;
+  color: var(--vp-c-text-2);
+}
+.footnotes hr {
+  display: none; /* 隐藏 markdown-it-footnote 默认自带的 hr */
+}
+.footnotes ol {
+  padding-left: 1.4rem;
+  margin: 0;
+}
+.footnotes li {
+  margin: 0.4rem 0;
+  position: relative;
+}
+.footnotes li::marker {
+  color: var(--vp-c-brand);
+  font-weight: 600;
+}
+/* 脚注中的 "返回" 链接 */
+.footnote-back {
+  margin-left: 0.5rem;
+  color: var(--vp-c-brand);
+  font-size: 0.85em;
+  text-decoration: none;
+  opacity: 0.75;
+}
+.footnote-back:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* ---- 高亮标注 ==xxx== (markdown-it-mark) ---- */
+mark {
+  background: linear-gradient(transparent 60%, var(--vp-c-brand-soft, rgba(255, 224, 102, 0.45)) 60%);
+  color: inherit;
+  padding: 0 2px;
+  border-radius: 3px;
+}
+.dark mark {
+  background: linear-gradient(transparent 60%, rgba(255, 200, 60, 0.35) 60%);
+}
+
+/* ---- Obsidian 复选框 / 任务列表美化 ---- */
+li.task-list-item {
+  list-style: none;
+  margin-left: -1.2rem;
+}
+li.task-list-item input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  accent-color: var(--vp-c-brand);
+  vertical-align: -2px;
+}
+
+/* ---- 脚注中出现的链接颜色校正 ---- */
+.footnotes a {
+  color: var(--vp-c-brand);
+}
+
+/* ---- success callout（自定义容器）绿色主题 ---- */
+.custom-block.success {
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 16px 16px 8px;
+  line-height: 24px;
+  color: #059669;
+  background-color: rgba(16, 185, 129, 0.1);
+}
+.custom-block.success .custom-block-title {
+  font-weight: 600;
+  color: #047857;
+}
+.custom-block.success a,
+.custom-block.success code {
+  color: #10b981;
+}
+.dark .custom-block.success {
+  border-color: #10b981;
+  color: #34d399;
+  background-color: rgba(16, 185, 129, 0.14);
+}
+.dark .custom-block.success .custom-block-title {
+  color: #34d399;
+}
+
+/* ---- tip callout（映射为 tip）蓝色主题 ---- */
+:root {
+  --vp-c-tip-1: #3b82f6;
+  --vp-c-tip-2: #2563eb;
+  --vp-c-tip-3: #1d4ed8;
+  --vp-c-tip-soft: rgba(59, 130, 246, 0.1);
+  --vp-custom-block-tip-border: transparent;
+  --vp-custom-block-tip-text: #2563eb;
+  --vp-custom-block-tip-bg: rgba(59, 130, 246, 0.1);
+  --vp-custom-block-tip-code-bg: rgba(59, 130, 246, 0.15);
+}
+.dark {
+  --vp-c-tip-1: #3b82f6;
+  --vp-c-tip-2: #60a5fa;
+  --vp-c-tip-3: #93c5fd;
+  --vp-c-tip-soft: rgba(59, 130, 246, 0.14);
+  --vp-custom-block-tip-border: transparent;
+  --vp-custom-block-tip-text: #60a5fa;
+  --vp-custom-block-tip-bg: rgba(59, 130, 246, 0.14);
+  --vp-custom-block-tip-code-bg: rgba(59, 130, 246, 0.2);
+}
