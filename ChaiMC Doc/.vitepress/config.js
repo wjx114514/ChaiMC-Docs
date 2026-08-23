@@ -150,7 +150,7 @@ export default defineConfig({
   title: 'ChaiMC 服务器文档',
   description: 'ChaiMC Minecraft 服务器帮助文档',
   lang: 'zh-CN',
-  base: '/docs/',
+  base: '/ChaiMC-Docs/',
   cleanUrls: true,
   ignoreDeadLinks: true,
 
