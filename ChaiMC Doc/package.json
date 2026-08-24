@@ -6,7 +6,11 @@
   "scripts": {
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview"
+    "docs:preview": "vitepress preview",
+    "build": "vitepress build",
+    "deploy": "vitepress build",
+    "deploy:cf": "wrangler pages deploy .vitepress/dist",
+    "deploy:cf:project": "wrangler pages deploy .vitepress/dist --project-name=chaimc-docs"
   },
   "keywords": [
     "chaimc",
@@ -21,6 +25,7 @@
     "markdown-it-footnote": "^4.0.0",
     "markdown-it-mark": "^4.0.0",
     "markdown-it-task-lists": "^2.1.1",
-    "vitepress": "^1.6.4"
+    "vitepress": "^1.6.4",
+    "wrangler": "^3.0.0"
   }
 }
