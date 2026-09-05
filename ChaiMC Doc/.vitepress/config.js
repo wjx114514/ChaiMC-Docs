@@ -13,6 +13,7 @@ const fileMap = {
   '3.给服务器新玩家的部分帮助': '/基础教程/3.给服务器新玩家的部分帮助.html',
   '4.基本命令': '/基础教程/4.基本命令.html',
   '5.MinecraftWiki': '/基础教程/5.MinecraftWiki.html',
+  '6.提问的智慧': '/基础教程/6.提问的智慧.html',
   'i.启动器的选择和下载': '/其他帮助/i.启动器的选择和下载.html',
   'ii.JAVA的下载': '/其他帮助/ii.JAVA的下载.html',
   'iii.付费指南': '/其他帮助/iii.付费指南.html',
@@ -36,7 +37,7 @@ const calloutTypes = {
   'danger': 'danger',
   'faq': 'info',
   'tip': 'tip',
-  'important': 'warning',
+  'important': 'important',
   'attention': 'warning',
   'question': 'info',
   'note': 'info',
@@ -199,6 +200,7 @@ export default defineConfig({
           { text: '3. 给服务器新玩家的部分帮助', link: '/基础教程/3.给服务器新玩家的部分帮助' },
           { text: '4. 基本命令', link: '/基础教程/4.基本命令' },
           { text: '5. MinecraftWiki', link: '/基础教程/5.MinecraftWiki' },
+          { text: '6. 提问的智慧', link: '/基础教程/6.提问的智慧' },
         ]
       },
       {
@@ -243,6 +245,7 @@ export default defineConfig({
             { text: '3. 给服务器新玩家的部分帮助', link: '/基础教程/3.给服务器新玩家的部分帮助' },
             { text: '4. 基本命令', link: '/基础教程/4.基本命令' },
             { text: '5. MinecraftWiki', link: '/基础教程/5.MinecraftWiki' },
+            { text: '6. 提问的智慧', link: '/基础教程/6.提问的智慧' },
           ]
         },
         {
@@ -342,6 +345,29 @@ export default defineConfig({
           }
         }
       })
+      // 注册 keypoint 容器类型（用于 Obsidian > [!important] 折叠标注）
+      md.use(container, 'keypoint', {
+        render(tokens, idx, _options, env) {
+          const token = tokens[idx]
+          if (token.nesting === 1) {
+            const info = token.info.trim().slice('keypoint'.length).trim()
+            const title = md.renderInline(info || '重要', { references: env.references })
+            return `<div class="keypoint custom-block"><p class="custom-block-title">${title}</p>\n`
+          } else {
+            return '</div>\n'
+          }
+        }
+      })
+      // 覆盖 VitePress 内置 GitHub alert 的 important 渲染，使标题支持 markdown 链接
+      const origAlertOpen = md.renderer.rules.github_alert_open
+      md.renderer.rules.github_alert_open = (tokens, idx, options, env, self) => {
+        const token = tokens[idx]
+        if (token.meta && token.meta.type === 'important') {
+          const title = md.renderInline(token.meta.title || '重要', { references: env.references })
+          return `<div class="important custom-block github-alert"><p class="custom-block-title">${title}</p>\n`
+        }
+        return origAlertOpen ? origAlertOpen(tokens, idx, options, env, self) : ''
+      }
       // 注册 collapsible 容器类型（用于 Obsidian > [!type]- 折叠标注，保留原颜色）
       md.use(container, 'collapsible', {
         render(tokens, idx, _options, env) {

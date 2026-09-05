@@ -348,14 +348,11 @@ async function main() {
       if (!nginxInfo.conf) nginxInfo.conf = '/etc/nginx/nginx.conf'
 
       // 探测 vhost include 目录
-      // 1) /etc/nginx/sites-available (Debian standard)
-      // 2) /www/server/panel/vhost/nginx (BT panel modern)
-      // 3) /www/server/nginx/conf/vhost (BT panel old)
-      // 4) /etc/nginx/conf.d
+      // BT 面板优先，再回退标准 Debian 路径
       const vhostProbes = [
-        '/etc/nginx/sites-available',
         '/www/server/panel/vhost/nginx',
         '/www/server/nginx/conf/vhost',
+        '/etc/nginx/sites-available',
         '/etc/nginx/conf.d',
       ]
       const vr = (await execCmd(
