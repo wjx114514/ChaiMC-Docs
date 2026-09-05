@@ -10,7 +10,8 @@
     "build": "vitepress build",
     "deploy": "vitepress build",
     "deploy:cf": "wrangler pages deploy .vitepress/dist",
-    "deploy:cf:project": "wrangler pages deploy .vitepress/dist --project-name=chaimc-docs"
+    "deploy:cf:project": "wrangler pages deploy .vitepress/dist --project-name=chaimc-docs",
+    "deploy:ssh": "node .scripts/deploy-ssh.mjs"
   },
   "keywords": [
     "chaimc",
@@ -25,7 +26,14 @@
     "markdown-it-footnote": "^4.0.0",
     "markdown-it-mark": "^4.0.0",
     "markdown-it-task-lists": "^2.1.1",
+    "ssh2": "^1.17.0",
+    "tar": "^7.5.22",
     "vitepress": "^1.6.4",
+    "vitepress-theme-teek": "^1.6.2",
     "wrangler": "^3.0.0"
+  },
+  "allowScripts": {
+    "ssh2@1.17.0": true,
+    "tar@7.5.22": true
   }
 }

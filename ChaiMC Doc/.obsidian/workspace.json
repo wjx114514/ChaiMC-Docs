@@ -13,26 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "加入服务器帮助/如何加入服务器.md",
+                "file": "加入服务器帮助/3.服务器命令和权限帮助.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "如何加入服务器"
+              "title": "3.服务器命令和权限帮助"
             }
           },
           {
-            "id": "7580259c0a8999b7",
+            "id": "3307c40d413429cd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "其他帮助/付费指南.md",
+                "file": "服务器规则/规则.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "付费指南"
+              "title": "规则"
             }
           }
         ],
@@ -114,7 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "加入服务器帮助/如何加入服务器.md",
+                "file": "其他帮助/付费指南.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +133,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "加入服务器帮助/如何加入服务器.md",
+                "file": "其他帮助/付费指南.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -201,29 +201,50 @@
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
       "bases:新建数据库": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "webpage-html-export:导出为HTML": false,
+      "vitepress-publisher:start vitepress": false
     }
   },
-  "active": "7580259c0a8999b7",
+  "active": "3307c40d413429cd",
   "lastOpenFiles": [
-    "其他帮助/启动器的选择和下载.md",
-    "其他帮助/付费指南.md",
-    "其他帮助/部分常用英文对照.md",
-    "其他帮助/JAVA的下载.md",
-    "加入服务器帮助/服务器命令和权限帮助.md",
-    "加入服务器帮助/加入前的准备工作.md",
-    "加入服务器帮助/如何加入服务器.md",
+    "node_modules/markdown-it-footnote/index.mjs",
+    "node_modules/markdown-it-footnote/README.md",
+    "node_modules/markdown-it-footnote/package.json",
+    "node_modules/markdown-it-footnote/dist/markdown-it-footnote.min.js",
+    "node_modules/markdown-it-footnote/dist/markdown-it-footnote.js",
+    "node_modules/markdown-it-footnote/dist/index.cjs.js",
+    "node_modules/markdown-it-footnote/dist",
+    "node_modules/markdown-it-footnote/LICENSE",
+    "node_modules/markdown-it-mark/index.mjs",
+    "node_modules/markdown-it-mark/README.md",
+    "node_modules/markdown-it-mark/package.json",
+    "node_modules/markdown-it-mark/dist/markdown-it-mark.min.js",
+    "node_modules/markdown-it-mark/dist/markdown-it-mark.js",
+    "index.md",
+    "node_modules/@esbuild/win32-x64/README.md",
+    "node_modules/@iconify-json/simple-icons/README.md",
+    "node_modules/vue/README.md",
+    "node_modules/preact/README.md",
+    "node_modules/vitepress/README.md",
+    "node_modules/vitepress/template/markdown-examples.md",
+    "node_modules/vitepress/template/index.md",
+    "node_modules/vitepress/template/api-examples.md",
+    "node_modules/vite/README.md",
+    "node_modules/vite/LICENSE.md",
+    "node_modules/@docsearch/js/README.md",
+    "node_modules/focus-trap/SECURITY.md",
+    "node_modules/focus-trap/README.md",
+    "node_modules/focus-trap/CHANGELOG.md",
+    "node_modules/@algolia/client-search/README.md",
+    "node_modules/tabbable/SECURITY.md",
+    "node_modules/tabbable/README.md",
+    "node_modules/tabbable/CHANGELOG.md",
+    "node_modules/@shikijs/types/README.md",
+    "node_modules/@vueuse/integrations/README.md",
+    "node_modules/mark.js/README.md",
+    "node_modules/@vue/devtools-api/README.md",
     "Pasted image 20260820132559.png",
-    "JAVA的下载.md",
-    "启动器的下载.md",
-    "未命名/加入前的准备工作.md",
-    "如何加入服务器.md",
-    "加入前的准备工作.md",
-    "加入服务器帮助",
-    "其他帮助",
-    "未命名/如何加入服务器.md",
-    "2026-08-19.md",
-    "未命名.canvas",
-    "欢迎.md"
+    "未命名.canvas"
   ]
 }

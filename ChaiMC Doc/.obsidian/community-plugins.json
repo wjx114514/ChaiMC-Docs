@@ -1,4 +1,7 @@
 [
   "obsidian-enhancing-export",
-  "obsidian-git"
+  "obsidian-git",
+  "webpage-html-export",
+  "vitepress-publisher",
+  "article-navigator"
 ]

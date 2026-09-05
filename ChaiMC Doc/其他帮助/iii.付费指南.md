@@ -9,12 +9,30 @@
 > - [ ] 微软账户[^1]（成人账户 即选择出生日期至今大于18年）
 
 打开[购买 Minecraft: Java & Bedrock Edition for PC | Xbox](https://www.xbox.com/zh-cn/games/store/minecraft-java-bedrock-edition-for-pc/9nxp44l49shj)
+
 在右上角登录你的微软账户，返回页面
-选择购买-开始使用！增加一种支付方式。-eWallet（支付宝）-下一页-如果你使用手机则点击下方绿色链接（登录到支付宝），如果你使用电脑则直接使用支付宝扫码-在支付宝操作，开通自动扣款-返回页面-选择继续
+
+选择**购买**
+
+**开始使用！增加一种支付方式。**
+
+选择**eWallet（支付宝）**点击**下一页**
+
+如果你使用手机则点击下方绿色链接（**登录到支付宝**）
+
+如果你使用电脑则直接使用支付宝扫码
+
+在支付宝操作，开通自动扣款
+返回页面并选择**继续**
 
 > [!question] 我突然后悔了，怎么退款？
-> 请打开[https://support.xbox.com/zh-SG/help/subscriptions-billing/buy-games-apps/refund-orders](https://support.xbox.com/zh-SG/help/subscriptions-billing/buy-games-apps/refund-orders)然后自行探索
-> >[!danger] 注意，如果你希望退款概率更高，请保证退款时间在14天内或游玩不超过2小时!
+> 请打开[申请数字游戏退款](https://support.xbox.com/zh-CN/help/subscriptions-billing/buy-games-apps/refund-orders)
+> 
+> 选择**Minecraft: Java & Bedrock Edition for PC**，然后点击**申请退款**，![退款](https://docimages.cn-nb1.rains3.com/refund.png)填写你的退款原因。
+> 
+> 如果你的账户正常，退款应该会在5分钟内返回原账户。
+> >[!danger] 注意，如果你希望退款概率更高，请保证退款时间在14天内且游玩不超过2小时!
+
 ## 购买PCL II测试版
 > [!tip] 购买前的准备工作
 > - [ ] 支付宝/微信（余额至少12.34元）
